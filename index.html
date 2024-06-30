@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div
+      class="rounded-lg border bg-card text-card-foreground shadow-sm mx-auto max-w-sm space-y-6 p-6"
+      data-v0-t="card"
+    >
+      <div class="space-y-2 text-center">
+        <h1 class="text-3xl font-bold">Connexion</h1>
+        <p class="text-muted-foreground">
+          Entrez votre email ci-dessous pour vous connecter à votre compte
+        </p>
+      </div>
+      <div class="space-y-4">
+        <div class="space-y-2">
+          <label
+            class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+            for="email"
+          >
+            Email
+          </label>
+          <input
+            class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+            id="email"
+            placeholder="m@example.com"
+            required=""
+            type="email"
+          />
+        </div>
+        <div class="space-y-2">
+          <div class="flex items-center">
+            <label
+              class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+              for="password"
+            >
+              Mot de passe
+            </label>
+            <a class="ml-auto inline-block text-sm underline" href="#">
+              Mot de passe oublié ?
+            </a>
+          </div>
+          <div class="relative">
+            <input
+              class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+              id="password"
+              required=""
+              type="password"
+            />
+            <button
+              class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-10 w-10 absolute right-2 top-1/2 -translate-y-1/2"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="h-5 w-5"
+              >
+                <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
