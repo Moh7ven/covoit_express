@@ -3,80 +3,309 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
   </head>
-  <body>
-    <div
-      class="rounded-lg border bg-card text-card-foreground shadow-sm mx-auto max-w-sm space-y-6 p-6"
-      data-v0-t="card"
-    >
-      <div class="space-y-2 text-center">
-        <h1 class="text-3xl font-bold">Connexion</h1>
-        <p class="text-muted-foreground">
-          Entrez votre email ci-dessous pour vous connecter à votre compte
-        </p>
-      </div>
-      <div class="space-y-4">
-        <div class="space-y-2">
-          <label
-            class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-            for="email"
-          >
-            Email
-          </label>
-          <input
-            class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-            id="email"
-            placeholder="m@example.com"
-            required=""
-            type="email"
-          />
-        </div>
-        <div class="space-y-2">
-          <div class="flex items-center">
-            <label
-              class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-              for="password"
-            >
-              Mot de passe
-            </label>
-            <a class="ml-auto inline-block text-sm underline" href="#">
-              Mot de passe oublié ?
-            </a>
-          </div>
-          <div class="relative">
-            <input
-              class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-              id="password"
-              required=""
-              type="password"
+  <body class="font-[Poppins] h-screen">
+    <div class="high-container">
+      <header class="">
+        <nav class="flex justify-between items-center w-[98%] mx-auto py-3">
+          <div>
+            <img
+              class="w-16 cursor-pointer"
+              src="./images/covoit.png"
+              alt="..."
             />
-            <button
-              class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-10 w-10 absolute right-2 top-1/2 -translate-y-1/2"
+          </div>
+          <div
+            class="nav-links duration-500 md:static absolute bg-with md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5"
+          >
+            <ul
+              class="flex md:flex-row flex-col md:items-center md:gap-[2vw] gap-8"
             >
+              <li>
+                <a class="hover:text-gray-500" href="#fonctinnements"
+                  >Fonctionnements</a
+                >
+              </li>
+              <li>
+                <a class="hover:text-gray-500" href="#recherche"
+                  >Recherche rapide</a
+                >
+              </li>
+              <li>
+                <a class="hover:text-gray-500" href="#statistiques"
+                  >Statistiques</a
+                >
+              </li>
+              <li>
+                <a class="hover:text-gray-500" href="#temoignage">Témoignage</a>
+              </li>
+              <li>
+                <a class="hover:text-gray-500" href="#equipes">Equipes</a>
+              </li>
+              <li>
+                <a class="hover:text-gray-500" href="#actualités">Actualités</a>
+              </li>
+            </ul>
+          </div>
+          <div class="flex items-center gap-5">
+            <div
+              class="signBtn bg-[#5271FF] text-white hover:bg-[#87acec] cursor-pointer"
+            >
+              S'inscrire
+            </div>
+            <div class="signBtnCon cursor-pointer">Se connecter</div>
+            <ion-icon
+              onclick="onToggleMenu(this)"
+              name="menu"
+              class="text-3xl cursor-pointer md:hidden"
+            ></ion-icon>
+          </div>
+        </nav>
+        <div class="hero">
+          <div class="hero-text1">
+            <p class="hero-text1-1">
+              Partagez vous <span>trajet</span> facilement.
+            </p>
+            <p>Voyagez moins cher, &nbsp;<span>voyagez</span> ensemble.</p>
+          </div>
+          <div class="hero-text2">
+            <p class="hero-text2-1">
+              Avec <span>Covoit'Express</span> trouver rapidement un partenaire
+              de voyage.
+            </p>
+          </div>
+          <div class="after-hero-text">
+            <div class="rejoinBtn">
+              <p>Rejoignez-nous</p>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
+                width="26.44px"
+                height="26.44px"
                 viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="h-5 w-5"
               >
-                <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path>
-                <circle cx="12" cy="12" r="3"></circle>
+                <path
+                  fill="white"
+                  fill-rule="evenodd"
+                  d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2c-5.185 0-9.449 3.947-9.95 9h9.536L8.293 7.707l1.414-1.414l5 5l.707.707l-.707.707l-5 5l-1.414-1.414L11.586 13H2.049c.502 5.053 4.766 9 9.951 9"
+                  clip-rule="evenodd"
+                />
               </svg>
-            </button>
+            </div>
           </div>
         </div>
-      </div>
+      </header>
+      <section id="fonctionnements">
+        <div class="fonction-container">
+          <div class="fonction-text">
+            <h1>Comment utiliser Covoit'Express ?</h1>
+            <p>
+              <span style="color: #5271ff"><u>Convoit'Express</u></span> a été
+              conçu de manière simple pour une prise en main rapide sans tracas
+              😊
+            </p>
+            <p>Suivez ces différentes étapes pour mieux comprendre ⬇️</p>
+          </div>
+          <div class="fonction-cards">
+            <div class="fonction-card">
+              <div class="fonction-card-img">
+                <img
+                  src="./images/inscri-card.svg"
+                  alt=""
+                  width="326px"
+                  height="240px"
+                />
+              </div>
+              <div class="fonction-card-text">
+                <h1>Etape 1</h1>
+                <p>
+                  Inscrivez-vous pour être répertorier dans notre base de
+                  données 📦
+                </p>
+              </div>
+            </div>
+            <div>
+              <img src="./images/arrow.png" alt="" height="65px" />
+            </div>
+            <div class="fonction-card">
+              <div class="fonction-card-img">
+                <img
+                  src="./images/inscri-card.svg"
+                  alt=""
+                  width="326px"
+                  height="240px"
+                />
+              </div>
+              <div class="fonction-card-text">
+                <h1>Etape 2</h1>
+                <p>Connectez-vous avec vos identifiants</p>
+              </div>
+            </div>
+            <div>
+              <img src="./images/arrow.png" alt="" height="65px" />
+            </div>
+            <div class="fonction-card">
+              <div class="fonction-card-img">
+                <img
+                  src="./images/inscri-card.svg"
+                  alt=""
+                  width="326px"
+                  height="240px"
+                />
+              </div>
+              <div class="fonction-card-text">
+                <h1>Etape 3</h1>
+                <p>
+                  Choisissez une option : <span>Conducteur</span> ou
+                  <span>Passager</span>
+                </p>
+              </div>
+            </div>
+            <div>
+              <img src="./images/arrow.png" alt="" height="65px" />
+            </div>
+            <div class="fonction-card">
+              <div class="fonction-card-img">
+                <img
+                  src="./images/inscri-card.svg"
+                  alt=""
+                  width="326px"
+                  height="240px"
+                />
+              </div>
+              <div class="fonction-card-text">
+                <h1>Etape 4</h1>
+                <p>
+                  Etant passager, vous pouvez rechercher un trajet et en etant
+                  conducteur vous pouvez ajouter un trajet.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="rechercher" name="rechercher">
+        <div class="rechercher-container">
+          <h1>Recherche rapide</h1>
+          <div class="search-bar">
+            <div class="depart-container">
+              <label for="depart">Départ : </label>
+              <select name="depart" id="depart">
+                <option value="cocody">Cocody</option>
+                <option value="yopougon">Yopougon</option>
+              </select>
+            </div>
+            <div class="arrive-container">
+              <label for="depart">Arrivée : </label>
+              <select name="arrivee" id="arrivee">
+                <option value="cocody">Cocody</option>
+                <option value="yopougon">Yopougon</option>
+              </select>
+            </div>
+            <div class="prix-container">
+              <label for="depart">Prix : </label>
+              <select name="prix" id="prix">
+                <option value="500-1000">500-1000</option>
+                <option value="1000-1500">1000-1500</option>
+                <option value="1500-2000">1500-2000</option>
+              </select>
+            </div>
+            <div class="icon-search-container focus">
+              <img src="./images/search-bar-icon.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="temoignages" name="temoignages">
+        <div class="temoignages-container">
+          <h1>Témoignages</h1>
+          <p>Quelques témoignages de nous meilleurs clients..........</p>
+          <div class="temoignages-cards-container">
+            <div class="change-card-slide">
+              <img src="./images/arrow-left.png" alt="" />
+            </div>
+            <div class="temoignages-card">
+              <div><img src="./images/girl.png" alt="" /></div>
+              <div class="card-name">
+                <p>Kouassi Akissi</p>
+              </div>
+              <div class="card-comment">
+                <p>
+                  Dépuis que j’utilise Convoit’express, je me déplace facilement
+                  sans dépensé beaucoup d’argent. Merci Covoit’express.
+                </p>
+              </div>
+            </div>
+
+            <div class="temoignages-card">
+              <div><img src="./images/boy.png" alt="" /></div>
+              <div class="card-name">
+                <p>Guy Roland</p>
+              </div>
+              <div class="card-comment">
+                <p>
+                  Je voyage habituellement seulement dans ma voitute. Mais
+                  dépuis que connais Covoit'Express, je voyage avec plusieurs
+                  personnes et je me fais un peu d'argent 🤑.
+                </p>
+              </div>
+            </div>
+            <div class="change-card-slide">
+              <img src="./images/arrow-right.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="statistiques" name="statistiques">
+        <div class="statistics-container">
+          <h1>Statistiques</h1>
+          <div class="statistics-cards-container">
+            <div class="statistics-card">
+              <p class="number-statistics">50</p>
+              <p class="texte-statistics">Trajets par mois</p>
+            </div>
+            <div class="statistics-card">
+              <p class="number-statistics">50</p>
+              <p class="texte-statistics">Trajets par mois</p>
+            </div>
+            <div class="statistics-card">
+              <p class="number-statistics">50</p>
+              <p class="texte-statistics">Trajets par mois</p>
+            </div>
+            <div class="statistics-card">
+              <p class="number-statistics">50</p>
+              <p class="texte-statistics">Trajets par mois</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="equipes" name="equipes">
+        <div class="equipes-container">
+          <h1>Notre Equipe</h1>
+          <div class="equipes-container-cards">
+            <div class="equipe-card">
+              <div><img src="./images/ceo.png" alt="" /></div>
+              <p class="person-name-equipe">Mohamed SANGARE</p>
+              <div class="person-post-equipe">
+                <p>
+                  Developpeur Full Stack / CEO
+                  <span>Covoit'Express</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
+    <script src="./js/burgerMenu.js"></script>
   </body>
 </html>
