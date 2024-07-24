@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #d4dbf8;
+}
+
+.high-container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+header {
+}
+
+nav {
+  font-size: 14px;
+  background-color: white;
+  width: 100%;
+}
+
+nav ul {
+  color: black;
+  font-size: 16px;
+}
+
+.main {
+  display: flex;
+  width: 100%;
+  height: 50vh;
+  background-image: url(../images/acceuil-image.jpg);
+
+  /* background-repeat: no-repeat; */
+  background-position: center;
+  background-size: cover;
+}
+
+#rechercher {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rechercher-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 50px;
+}
+
+#rechercher .rechercher-container h1 {
+  color: white;
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  background-color: #5271ff;
+  padding: 10px;
+  /* margin-top: 5%; */
+}
+
+.rechercher-container .search-bar {
+  height: 83px;
+  width: 80%;
+  background-color: white;
+  border-radius: 34px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-left: 15px;
+  padding-right: 15px;
+  /* margin-top: 50px; */
+}
+
+.rechercher-container .search-bar select {
+  height: 37px;
+  width: 120px;
+  background-color: #5271ff;
+  color: white;
+  font-weight: 300;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 7px;
+}
+
+.rechercher-container .search-bar .icon-search-bar-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #5271ff;
+}
+
+.rechercher-container .search-bar .icon-search-bar-icon img {
+  cursor: pointer;
+}
+
+.deco {
+  border-radius: 13px;
+  width: 140px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: #5271ff;
+  color: white;
+  cursor: pointer;
+}

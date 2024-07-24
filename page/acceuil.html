@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Acceuil</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/acceuil.css" />
+    <script src="../js/jquery.js"></script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+  </head>
+  <body>
+    <div class="high-container">
+      <header class="">
+        <nav class="flex justify-between items-center mx-auto py-3">
+          <div>
+            <img
+              class="w-16 cursor-pointer"
+              src="../images/covoit.png"
+              alt="..."
+            />
+          </div>
+          <div
+            class="nav-links duration-500 md:static absolute bg-with md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5"
+          >
+            <ul
+              class="flex md:flex-row flex-col md:items-center md:gap-[2vw] gap-8"
+            >
+              <li>
+                <a class="hover:text-gray-500" href="#fonctinnements"
+                  >Acceuil</a
+                >
+              </li>
+              <li>
+                <a class="hover:text-gray-500" href="#statistiques"
+                  >Historique</a
+                >
+              </li>
+              <li>
+                <a class="hover:text-gray-500" href="#temoignage"
+                  >Statistiques</a
+                >
+              </li>
+              <li>
+                <a class="hover:text-gray-500" href="#equipes"
+                  >Espace conducteur</a
+                >
+              </li>
+              <li>
+                <a class="hover:text-gray-500" href="#actualités">Profil</a>
+              </li>
+            </ul>
+          </div>
+          <div class="flex items-center gap-5">
+            <div
+              class="signBtn bg-[#5271FF] text-white hover:bg-[#87acec] cursor-pointer"
+            >
+              S'inscrire
+            </div>
+
+            <ion-icon
+              onclick="onToggleMenu(this)"
+              name="menu"
+              class="text-3xl cursor-pointer md:hidden"
+            ></ion-icon>
+          </div>
+        </nav>
+      </header>
+      <main class="main">
+        <section id="rechercher" name="rechercher">
+          <div class="rechercher-container">
+            <h1>Je cherche un trajet pour...</h1>
+            <div class="search-bar">
+              <div class="depart-container">
+                <label for="depart">Départ : </label>
+                <select name="depart" id="depart">
+                  <option value="cocody">Cocody</option>
+                  <option value="yopougon">Yopougon</option>
+                </select>
+              </div>
+              <div class="arrive-container">
+                <label for="depart">Arrivée : </label>
+                <select name="arrivee" id="arrivee">
+                  <option value="cocody">Cocody</option>
+                  <option value="yopougon">Yopougon</option>
+                </select>
+              </div>
+              <div class="prix-container">
+                <label for="depart">Prix : </label>
+                <select name="prix" id="prix">
+                  <option value="500-1000">500-1000</option>
+                  <option value="1000-1500">1000-1500</option>
+                  <option value="1500-2000">1500-2000</option>
+                </select>
+              </div>
+              <div class="icon-search-container cursor-pointer">
+                <img src="../images/search-bar-icon.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="../js/burgerMenu.js"></script>
+    <script src="../js/acceuil.js"></script>
+  </body>
+</html>
