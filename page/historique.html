@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Acceuil</title>
+    <title>Historiques</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -12,7 +12,7 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../css/acceuil.css" />
+    <link rel="stylesheet" href="../css/historique.css" />
     <link rel="stylesheet" href="../css/popup.css" />
     <script src="../js/jquery.js"></script>
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
@@ -73,45 +73,25 @@
           </div>
         </nav>
       </header>
-      <main class="main">
-        <section id="rechercher" name="rechercher">
-          <div class="rechercher-container">
-            <h1>Je cherche un trajet pour...</h1>
-            <div class="search-bar">
-              <div class="depart-container">
-                <label for="depart">Départ : </label>
-                <select name="depart" id="depart">
-                  <option value="cocody">Cocody</option>
-                  <option value="yopougon">Yopougon</option>
-                </select>
-              </div>
-              <div class="arrive-container">
-                <label for="depart">Arrivée : </label>
-                <select name="arrivee" id="arrivee">
-                  <option value="cocody">Cocody</option>
-                  <option value="yopougon">Yopougon</option>
-                </select>
-              </div>
-              <div class="prix-container">
-                <label for="depart">Prix : </label>
-                <select name="prix" id="prix">
-                  <option value="500-1000">500-1000</option>
-                  <option value="1000-1500">1000-1500</option>
-                  <option value="1500-2000">1500-2000</option>
-                </select>
-              </div>
-              <div class="icon-search-container cursor-pointer" id="search">
-                <img src="../images/search-bar-icon.png" alt="" />
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
       <div class="container">
-        <h1>Resultats des recherches</h1>
-        <div class="cards-container"></div>
+        <div>
+          <h1>Trajets en cours</h1>
+          <div class="cards-container" id="trajer-en-cours"></div>
+          <div class="trait"></div>
+        </div>
+        <div>
+          <div class="trait"></div>
+          <h1>Trajet(s) effectue(s)</h1>
+          <div class="cards-container" id="trajer-effectue"></div>
+          <div class="trait"></div>
+        </div>
+        <div>
+          <div class="trait"></div>
+          <h1>Trajet(s) annulé(s)</h1>
+          <div class="cards-container" id="trajer-annules"></div>
+          <div class="trait"></div>
+        </div>
       </div>
-
       <!-- Footer -->
       <footer id="footer">
         <div class="footer-line"></div>
@@ -131,7 +111,7 @@
       <!-- End Footer -->
     </div>
     <script src="../js/burgerMenu.js"></script>
-    <script src="../js/acceuil.js"></script>
+    <script src="../js/historique.js"></script>
 
     <script src="../js/popup.js"></script>
   </body>

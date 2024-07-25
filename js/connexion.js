@@ -1,4 +1,13 @@
 $(document).ready(() => {
+  const verifyToken = () => {
+    const token = localStorage.getItem("tokenCovoitExpress");
+    if (token) {
+      return (window.location.href = "./acceuil.html");
+    }
+  };
+
+  verifyToken();
+
   const submitBtn = $("#btn-submit");
 
   const verifChamp = () => {

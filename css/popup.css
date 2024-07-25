@@ -1,0 +1,82 @@
+/* Style de base pour le popup */
+#cd-pop-up {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Fond sombre */
+  opacity: 0;
+  visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s, visibility 0s 0.3s; /* Transitions */
+}
+
+#cd-pop-up.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s 0s, visibility 0s 0s; /* Transitions */
+}
+
+.cd-popup-container {
+  position: relative;
+  width: 90%;
+  max-width: 400px;
+  margin: 0 auto;
+  background: #fff; /* Fond blanc pour le contenu du popup */
+  border-radius: 0.4em;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+  transform: translateY(-50px);
+}
+
+.cd-popup-container.is-visible {
+  transform: translateY(0);
+}
+
+.cd-popup-container p {
+  padding: 3em 1em;
+  margin: 0;
+}
+
+div.cd-buttons a {
+  float: left;
+  width: 50%;
+  line-height: 3.5em;
+  text-decoration: none;
+  color: black;
+}
+
+div.cd-buttons a:first-child {
+  background-color: #fc7169;
+  border-radius: 0 0 0 0.4em;
+}
+
+div.cd-buttons a:nth-child(2) {
+  background-color: #b6bece;
+  border-radius: 0 0 0.4em 0 0.4em;
+}
+
+.cd-popup-container .cd-popup-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  color: #8f9cb5;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Ajout des transitions */
+.cd-popup-container {
+  transform: translateY(-50px);
+  transition: transform 0.3s ease-out;
+}
+
+#cd-pop-up.is-visible .cd-popup-container {
+  transform: translateY(0);
+}
