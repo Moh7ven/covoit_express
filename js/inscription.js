@@ -57,6 +57,7 @@ $(document).ready(() => {
   };
 
   const registerPerson = () => {
+    //console.log("ok");
     const nom = $("#nom").val();
     const prenom = $("#prenom").val();
     const email = $("#email").val();
