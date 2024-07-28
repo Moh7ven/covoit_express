@@ -7,7 +7,7 @@ $(document).ready(() => {
     const tel = $("#tel").val();
     const password = $("#password").val();
     const confirmPassword = $("#confirm-password").val();
-
+    // ici on vérifie les champs
     const message = $("#message");
     message.css("color", "red");
     if (nom === "") {
