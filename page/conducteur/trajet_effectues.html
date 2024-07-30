@@ -12,7 +12,7 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../../css/espace_conducteur.css" />
+    <link rel="stylesheet" href="../../css/trajet_effectues.css" />
     <link rel="stylesheet" href="../../css/popup.css" />
     <script src="../../js/jquery.js"></script>
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
@@ -78,58 +78,27 @@
       <main class="main">
         <div class="mini-menu">
           <ul>
-            <li class="devenir">
+            <li>
               <a href="./espace_conducteur.html">Devenir conducteur</a>
             </li>
-            <li><a href="./creer_trajet.html">Creer un trajet</a></li>
-            <li><a href="./trajet_en_cours.html">Trajet en cours</a></li>
-            <li><a href="./trajet_effectues.html">Trajets effectue</a></li>
+            <li>
+              <a href="./creer_trajet.html">Creer un trajet</a>
+            </li>
+            <li>
+              <a href="./trajet_en_cours.html">Trajet en cours</a>
+            </li>
+            <li class="active">
+              <a href="./trajet_effectues.html">Trajets effectues</a>
+            </li>
             <li><a href="./modifier.html">Modifier</a></li>
           </ul>
         </div>
         <div class="contenue">
           <div class="title">
-            <h1>Devenir conducteur</h1>
-            <p>Remplissez ce petit formulaire pour devenir conducteur.</p>
+            <h1>Trajets Effectués</h1>
+            <p>La liste des vos trajets effectues.</p>
           </div>
-
-          <div class="formulaire">
-            <form action="">
-              <div>
-                <label for="">N° Permis de conduire: </label>
-                <input type="text" name="nom" id="permis" />
-              </div>
-              <div>
-                <label for="">Marque Vehicule</label>
-                <input type="text" name="vehicule" id="vehicule" />
-              </div>
-              <div>
-                <label for="">Couleur véhicule</label>
-                <input type="text" name="colorVehicule" id="colorVehicule" />
-              </div>
-
-              <div>
-                <label for="">Immatriculation</label>
-                <input
-                  type="text"
-                  name="immatriculation"
-                  id="immatriculation"
-                />
-              </div>
-
-              <div>
-                <label for="">Nombre de places</label>
-                <input type="number" name="nombrePlace" id="nombrePlace" />
-              </div>
-              <p id="message"></p>
-              <input
-                type="submit"
-                value="S'enregistrer"
-                name="save"
-                id="save"
-              />
-            </form>
-          </div>
+          <div class="container-cards"></div>
         </div>
       </main>
 
@@ -153,6 +122,6 @@
     </div>
     <script src="../../js/burgerMenu.js"></script>
     <script src="../../js/popup.js"></script>
-    <script src="../../js/saveAsConducteur.js"></script>
+    <script src="../../js/trajet_effectues.js"></script>
   </body>
 </html>

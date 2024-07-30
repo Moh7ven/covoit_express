@@ -2,10 +2,17 @@ $(document).ready(() => {
   const verifToken = () => {
     const token = localStorage.getItem("tokenCovoitExpress");
     if (token == null) {
-      window.location.href = "./page/connexion.html";
+      window.location.href = "../connexion.html";
     }
   };
   verifToken();
+
+  const deco = $("#deco");
+  deco.click((e) => {
+    e.preventDefault();
+    localStorage.removeItem("tokenCovoitExpress");
+    window.location.href = "../connexion.html";
+  });
 
   const verifyChamp = () => {
     const date = $("#date").val();

@@ -11,7 +11,7 @@ $(document).ready(() => {
   deco.click((e) => {
     e.preventDefault();
     localStorage.removeItem("tokenCovoitExpress");
-    window.location.href = "./connexion.html";
+    window.location.href = "../connexion.html";
   });
 
   const verifChamp = () => {
