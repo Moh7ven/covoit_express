@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #d4dbf8;
+}
+
+.high-container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+header {
+}
+
+nav {
+  font-size: 14px;
+  background-color: white;
+  width: 100%;
+  padding: 10px;
+}
+
+nav ul {
+  color: black;
+  font-size: 16px;
+}
+
+.nav-active {
+  position: relative;
+  font-weight: bold;
+
+  &::after {
+    content: "";
+    height: 10px;
+    width: 0;
+    background-color: #5271ff;
+    position: absolute;
+    border-radius: 10px;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-animation: anim 0.3s ease forwards;
+    animation: anim 0.3s ease forwards;
+
+    @-webkit-keyframes anim {
+      to {
+        width: 100%;
+      }
+    }
+
+    @keyframes anim {
+      to {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.deco {
+  border-radius: 13px;
+  width: 140px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: orangered;
+  color: white;
+  cursor: pointer;
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 50px;
+  margin-top: 5%;
+}
+
+.mini-menu {
+  height: auto;
+  width: 190px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.17);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 10px;
+  border: 2px solid #5271ff;
+}
+
+.mini-menu ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.mini-menu ul li {
+  list-style: none;
+  /* margin-bottom: 40px; */
+  cursor: pointer;
+  font-size: 15px;
+  width: 100%;
+  padding: 10px;
+}
+
+.mini-menu .active {
+  height: auto;
+  width: 100%;
+  background-color: #5271ff;
+  font-weight: bold;
+  color: white;
+  border-radius: 8px;
+}
+
+.contenue {
+  min-height: 400px;
+  max-height: auto;
+  width: 100%;
+  background-color: white;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.contenue .title h1 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #5271ff;
+  width: 100%;
+  text-align: center;
+}
+
+.contenue .title p {
+  font-size: 20px;
+  font-weight: 100;
+  width: 457px;
+  text-align: center;
+}

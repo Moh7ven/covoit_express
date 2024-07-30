@@ -9,7 +9,6 @@ $(document).ready(() => {
   verifyToken();
 
   const submitBtn = $("#btn-submit");
-
   const verifChamp = () => {
     const tel = $("#tel").val();
     const password = $("#password").val();
@@ -27,9 +26,6 @@ $(document).ready(() => {
     if (password === "") {
       message.text("Veuillez renseigner votre mot de passe");
       return false;
-    } else if (password.length < 8 || password.length > 10) {
-      message.text("Le mot de passe doit être entre 8 et 10 caractères");
-      return false;
     }
 
     return true;
@@ -38,6 +34,7 @@ $(document).ready(() => {
   const login = () => {
     const tel = $("#tel").val();
     const password = $("#password").val();
+    console.log(verifChamp());
     if (verifChamp() == true) {
       const person = {
         tel,

@@ -111,6 +111,7 @@ $(document).ready(() => {
   };
 
   search.click((e) => {
+    $(".cards-container").html("");
     e.preventDefault();
     searchSend();
   });

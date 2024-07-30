@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Historiques</title>
+    <title>Espace conducteur</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -12,9 +12,9 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../css/historique.css" />
-    <link rel="stylesheet" href="../css/popup.css" />
-    <script src="../js/jquery.js"></script>
+    <link rel="stylesheet" href="../../css/trajet_en_cours.css" />
+    <link rel="stylesheet" href="../../css/popup.css" />
+    <script src="../../js/jquery.js"></script>
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
   </head>
   <body>
@@ -24,7 +24,7 @@
           <div>
             <img
               class="w-16 cursor-pointer"
-              src="../images/covoit.png"
+              src="../../images/covoit.png"
               alt="..."
             />
           </div>
@@ -35,27 +35,27 @@
               class="flex md:flex-row flex-col md:items-center md:gap-[2vw] gap-8"
             >
               <li>
-                <a class="hover:text-gray-500" href="./acceuil.html">Acceuil</a>
+                <a class="hover:text-gray-500 nav-active" href="../acceuil.html"
+                  >Acceuil</a
+                >
               </li>
               <li>
-                <a class="hover:text-gray-500" href="./historique.html"
+                <a class="hover:text-gray-500" href="../historique.html"
                   >Historique</a
                 >
               </li>
               <li>
-                <a class="hover:text-gray-500" href="./statistiques.html"
+                <a class="hover:text-gray-500" href="../statistiques.html"
                   >Statistiques</a
                 >
               </li>
               <li>
-                <a
-                  class="hover:text-gray-500"
-                  href="./conducteur/espace_conducteur.html"
+                <a class="hover:text-gray-500" href="../espace_conducteur.html"
                   >Espace conducteur</a
                 >
               </li>
               <li>
-                <a class="hover:text-gray-500" href="./profil.html">Profil</a>
+                <a class="hover:text-gray-500" href="../profil.html">Profil</a>
               </li>
             </ul>
           </div>
@@ -75,46 +75,48 @@
           </div>
         </nav>
       </header>
-      <div class="container">
-        <div>
-          <h1>Trajets en cours</h1>
-          <div class="cards-container" id="trajer-en-cours"></div>
-          <div class="trait"></div>
+      <main class="main">
+        <div class="mini-menu">
+          <ul>
+            <li>
+              <a href="./espace_conducteur.html">Devenir conducteur</a>
+            </li>
+            <li class="active">
+              <a href="./creer_trajet.html">Creer un trajet</a>
+            </li>
+            <li><a href="./trajet_en_cours.html">Trajet en cours</a></li>
+            <li><a href="./trajet_effectuer.html">Trajets effectue</a></li>
+            <li><a href="./modifier.html">Modifier</a></li>
+          </ul>
         </div>
-        <div>
-          <div class="trait"></div>
-          <h1>Trajet(s) effectue(s)</h1>
-          <div class="cards-container" id="trajer-effectue"></div>
-          <div class="trait"></div>
+        <div class="contenue">
+          <div class="title">
+            <h1>Créer un trajet</h1>
+            <p>Créer un trajet et faites-vous de l'argent.</p>
+          </div>
         </div>
-        <div>
-          <div class="trait"></div>
-          <h1>Trajet(s) annulé(s)</h1>
-          <div class="cards-container" id="trajer-annules"></div>
-          <div class="trait"></div>
-        </div>
-      </div>
+      </main>
+
       <!-- Footer -->
       <footer id="footer">
         <div class="footer-line"></div>
         <div class="footer-container">
           <div class="footer-social-icons">
-            <img src="../images/x.png" alt="" />
-            <img src="../images/facebook.png" alt="" />
-            <img src="../images/instagram.png" alt="" />
-            <img src="../images/whatsapp.png" alt="" />
+            <img src="../../images/x.png" alt="" />
+            <img src="../../images/facebook.png" alt="" />
+            <img src="../../images/instagram.png" alt="" />
+            <img src="../../images/whatsapp.png" alt="" />
           </div>
           <div class="footer-logo">
-            <img src="../images/covoit-footer.png" alt="" />
+            <img src="../../images/covoit-footer.png" alt="" />
           </div>
           <p>© 2024 Mohamed Sangare. All rights reserved.</p>
         </div>
       </footer>
       <!-- End Footer -->
     </div>
-    <script src="../js/burgerMenu.js"></script>
-    <script src="../js/historique.js"></script>
-
-    <script src="../js/popup.js"></script>
+    <script src="../../js/burgerMenu.js"></script>
+    <script src="../../js/popup.js"></script>
+    <script src="../../js/creer_trajet.js"></script>
   </body>
 </html>
