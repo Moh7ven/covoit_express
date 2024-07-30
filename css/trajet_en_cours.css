@@ -151,3 +151,112 @@ nav ul {
   width: 457px;
   text-align: center;
 }
+
+.contenue .container-cards {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 10px;
+}
+
+.contenue .container-cards .card {
+  width: 60%;
+  height: 200px;
+  background-color: rgba(172, 172, 172, 0.25);
+  border-radius: 12px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 20px;
+  border-left: 7px solid #5271ff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.container-cards .card .card-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.card-content div p {
+  font-size: 16px;
+  margin-bottom: 10px;
+  font-weight: 200;
+}
+
+.card-content div p span {
+  font-weight: bold;
+  color: #5271ff;
+}
+
+.container-cards .btn-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.container-cards .btn-container button {
+  width: 120px;
+  height: 40px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  cursor: pointer;
+}
+
+.container-cards .btn-container .btn-annule {
+  background-color: orangered;
+}
+
+.container-cards .btn-container .btn-terminer {
+  background-color: #5271ff;
+}
+
+/* footer */
+footer {
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  padding-top: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  margin-top: 5%;
+}
+
+footer .footer-line {
+  width: 100%;
+  height: 17px;
+  background-color: #5271ff;
+}
+
+footer .footer-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-container .footer-social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-container p {
+  font-size: 12px;
+  font-weight: 200;
+}
