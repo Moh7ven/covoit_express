@@ -46,16 +46,24 @@ $(document).ready(() => {
           data.data.forEach((element) => {
             html += `
                   <div class="card">
-                    <p><u>Trajet</u>: ${element.idTrajet.lieuDepart} - ${element.idTrajet.lieuArrivee}</p>
-                    <p><u>Prix</u>: ${element.idTrajet.cout} Fcfa</p>
-                    <p><u>Nombre de places restantes</u>: ${element.idTrajet.placeRestantes}</p>
-                    <p><u>Date</u>: ${element.idTrajet.date}</p>
-                    <p><u>Heure</u>: ${element.idTrajet.heure}</p>
-                    <p><u>Conducteur</u>: ${element.idClient.nom} ${element.idClient.prenom}</p>
-                    <p><u>Telephone</u>: ${element.idClient.tel}</p>
-                    <p><u>Mot du conducteur </u>: ${element.note}</p>
-                    <button class="btn-annuler" style="background-color: orangered; color: white" onclick='annulerOption("${element.idTrajet._id}")'>Annuler</button>
-                  </div> 
+                    <div class="card-content">
+                        <div>
+                          <p><span>Trajet:</span>  ${element.idTrajet.lieuDepart} - ${element.idTrajet.lieuArrivee}</p>
+                          <p><span>Prix:</span> ${element.idTrajet.cout} Fcfa</p>
+                          <p><span>Nombre de places restantes:</span>  ${element.idTrajet.placeRestantes}</p>
+                          <p><span>Date:</span> ${element.idTrajet.date}</p>
+                        </div>
+                        <div>
+                          <p><span>Heure : </span>${element.idTrajet.heure}</p>
+                          <p><span>Conducteur: </span> ${element.idTrajet.idClient.nom} ${element.idTrajet.idClient.prenom}</p>
+                          <p><span>Telephone: </span>${element.idTrajet.idClient.tel}</p>
+                          <p><span>Mot du conducteur:</span> ${element.idTrajet.note}</p>
+                        </div>
+                        <div class="btn-container">
+                          <button class="btn-annule" onclick='annulerOption("${element.idTrajet._id}")'>Annuler</button>
+                        </div>
+                      </div>
+                  </div>
                 `;
 
             $("#trajer-en-cours").html(html);
@@ -121,15 +129,21 @@ $(document).ready(() => {
           data.data.forEach((element) => {
             html += `
                     <div class="card">
-                      <p><u>Trajet</u>: ${element.lieuDepart} - ${element.lieuArrivee}</p>
-                      <p><u>Prix</u>: ${element.cout} Fcfa</p>
-                      <p><u>Nombre de places restantes</u>: ${element.placeRestantes}</p>
-                      <p><u>Date</u>: ${element.date}</p>
-                      <p><u>Heure</u>: ${element.heure}</p>
-                      <p><u>Conducteur</u>: ${element.idClient.nom} ${element.idClient.prenom}</p>
-                      <p><u>Telephone</u>: ${element.idClient.tel}</p>
-                      <p><u>Mot du conducteur </u>: ${element.note}</p>
-                    </div> 
+                    <div class="card-content">
+                        <div>
+                          <p><span>Trajet:</span>  ${element.idTrajet.lieuDepart} - ${element.idTrajet.lieuArrivee}</p>
+                          <p><span>Prix:</span> ${element.idTrajet.cout} Fcfa</p>
+                          <p><span>Nombre de places restantes:</span>  ${element.idTrajet.placeRestantes}</p>
+                          <p><span>Date:</span> ${element.idTrajet.date}</p>
+                        </div>
+                        <div>
+                          <p><span>Heure : </span>${element.idTrajet.heure}</p>
+                          <p><span>Conducteur: </span> ${element.idTrajet.idClient.nom} ${element.idTrajet.idClient.prenom}</p>
+                          <p><span>Telephone: </span>${element.idTrajet.idClient.tel}</p>
+                          <p><span>Mot du conducteur:</span> ${element.idTrajet.note}</p>
+                        </div>
+                      </div>
+                  </div>
                   `;
 
             $("#trajer-annules").html(html);

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Acceuil</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/profil.css" />
+    <link rel="stylesheet" href="../css/popup.css" />
+    <script src="../js/jquery.js"></script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+  </head>
+  <body>
+    <div class="high-container">
+      <header class="">
+        <nav class="flex justify-between items-center mx-auto py-3">
+          <div>
+            <img
+              class="w-16 cursor-pointer"
+              src="../images/covoit.png"
+              alt="..."
+            />
+          </div>
+          <div
+            class="nav-links duration-500 md:static absolute bg-with md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5"
+          >
+            <ul
+              class="flex md:flex-row flex-col md:items-center md:gap-[2vw] gap-8"
+            >
+              <li>
+                <a class="hover:text-gray-500" href="./acceuil.html">Acceuil</a>
+              </li>
+              <li>
+                <a class="hover:text-gray-500" href="./historique.html"
+                  >Historique</a
+                >
+              </li>
+              <li>
+                <a class="hover:text-gray-500" href="./statistiques.html"
+                  >Statistiques</a
+                >
+              </li>
+              <li>
+                <a
+                  class="hover:text-gray-500"
+                  href="./conducteur/espace_conducteur.html"
+                  >Espace conducteur</a
+                >
+              </li>
+              <li>
+                <a class="hover:text-gray-500 nav-active" href="./profil.html"
+                  >Profil</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="flex items-center gap-5">
+            <div
+              class="deco text-white hover:bg-[#87acec] cursor-pointer"
+              id="deco"
+            >
+              Se deconnecter
+            </div>
+
+            <ion-icon
+              onclick="onToggleMenu(this)"
+              name="menu"
+              class="text-3xl cursor-pointer md:hidden"
+            ></ion-icon>
+          </div>
+        </nav>
+      </header>
+      <div class="main">
+        <div class="contenue">
+          <div class="title">
+            <h1>Profil</h1>
+            <p>Vous povez ici, modifier votre profil.</p>
+          </div>
+
+          <div class="formulaire">
+            <form action="">
+              <div>
+                <label for="nom">Nom : </label>
+                <input type="text" name="nom" id="nom" />
+              </div>
+              <div>
+                <label for="prenom">Prenom : </label>
+                <input type="text" name="prenom" id="prenom" />
+              </div>
+              <div>
+                <label for="email">Email : </label>
+                <input type="text" name="email" id="email" />
+              </div>
+
+              <div>
+                <label for="tel">tel :</label>
+                <input type="number" name="tel" id="tel" />
+              </div>
+              <p id="message"></p>
+              <input type="submit" value="Sauvegarder" name="save" id="save" />
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <footer id="footer">
+        <div class="footer-line"></div>
+        <div class="footer-container">
+          <div class="footer-social-icons">
+            <img src="../images/x.png" alt="" />
+            <img src="../images/facebook.png" alt="" />
+            <img src="../images/instagram.png" alt="" />
+            <img src="../images/whatsapp.png" alt="" />
+          </div>
+          <div class="footer-logo">
+            <img src="../images/covoit-footer.png" alt="" />
+          </div>
+          <p>© 2024 Mohamed Sangare. All rights reserved.</p>
+        </div>
+      </footer>
+      <!-- End Footer -->
+    </div>
+    <script src="../js/burgerxMenu.js"></script>
+    <script src="../js/profil.js"></script>
+    <script src="../js/popup.js"></script>
+  </body>
+</html>

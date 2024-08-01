@@ -43,19 +43,27 @@ $(document).ready(() => {
           data.data.forEach((element) => {
             html += `
                 <div class="card">
-                  <p><u>Trajet</u>: ${element.lieuDepart} - ${element.lieuArrivee}</p>
-                  <p><u>Prix</u>: ${element.cout} Fcfa</p>
-                  <p><u>Nombre de places restantes</u>: ${element.placeRestantes}</p>
-                  <p><u>Date</u>: ${element.date}</p>
-                  <p><u>Heure</u>: ${element.heure}</p>
-                  <p><u>Conducteur</u>: ${element.idClient.nom} ${element.idClient.prenom}</p>
-                  <p><u>Telephone</u>: ${element.idClient.tel}</p>
-                  <p><u>Mot du conducteur </u>: ${element.note}</p>
-                  <button class="btn-reserver" onclick='reserver("${element._id}")'>Réserver</button>
+                  <div class="card-content">
+                        <div>
+                          <p><span>Trajet:</span>  ${element.lieuDepart} - ${element.lieuArrivee}</p>
+                          <p><span>Prix:</span> ${element.cout} Fcfa</p>
+                          <p><span>Nombre de places restantes:</span>  ${element.placeRestantes}</p>
+                          <p><span>Date:</span> ${element.date}</p>
+                        </div>
+                        <div>
+                          <p><span>Heure : </span>${element.heure}</p>
+                          <p><span>Conducteur: </span> ${element.idClient.nom} ${element.idClient.prenom}</p>
+                          <p><span>Telephone: </span>${element.idClient.tel}</p>
+                          <p><span>Mot du conducteur:</span> ${element.note}</p>
+                        </div>
+                        <div class="btn-container">
+                          <button class="btn-terminer" onclick='reserver("${element._id}")'>Reserver</button>
+                        </div>
+                      </div>
                 </div>
               `;
 
-            $(".cards-container").html(html);
+            $(".container-cards").html(html);
           });
         } else {
           console.log(data.message);

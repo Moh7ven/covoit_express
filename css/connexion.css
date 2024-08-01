@@ -16,7 +16,7 @@
 
 #connexion .container {
   width: 498px;
-  height: 450px;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

@@ -158,6 +158,7 @@ nav ul {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   gap: 20px;
   padding: 10px;
 }
@@ -193,6 +194,12 @@ nav ul {
 .card-content div p span {
   font-weight: bold;
   color: #5271ff;
+}
+
+.card:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: 0.5s;
 }
 
 .container-cards .btn-container {

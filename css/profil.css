@@ -28,7 +28,7 @@ nav ul {
   font-size: 16px;
 }
 
-.nav-active-option {
+.nav-active {
   height: auto;
   width: 100%;
   background-color: #5271ff;
@@ -36,6 +36,15 @@ nav ul {
   color: white;
   border-radius: 4px;
   padding: 10px;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 50px;
+  margin-top: 5%;
 }
 
 .deco {
@@ -50,56 +59,6 @@ nav ul {
   background-color: orangered;
   color: white;
   cursor: pointer;
-}
-
-.main {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  gap: 50px;
-  margin-top: 5%;
-}
-
-.mini-menu {
-  height: auto;
-  width: 190px;
-  background-color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 12px;
-  padding: 10px;
-  border: 1px solid rgba(0, 0, 0, 0.17);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  padding: 10px;
-  border: 2px solid #5271ff;
-}
-
-.mini-menu ul {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-}
-
-.mini-menu ul li {
-  list-style: none;
-  /* margin-bottom: 40px; */
-  cursor: pointer;
-  font-size: 15px;
-  width: 100%;
-  padding: 10px;
-}
-
-.mini-menu .devenir {
-  height: auto;
-  width: 100%;
-  background-color: #5271ff;
-  font-weight: bold;
-  color: white;
-  border-radius: 8px;
 }
 
 .contenue {
@@ -130,7 +89,8 @@ nav ul {
   width: 457px;
   text-align: center;
 }
-.contenue .formulaire {
+
+.formulaire {
   display: flex;
   justify-content: center;
   align-items: center;
