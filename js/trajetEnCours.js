@@ -66,7 +66,7 @@ $(document).ready(() => {
                   <p><span>Places restantes : </span>${data.data.placeRestantes}</p>
                 </div>
               </div>
-              <p><a href="">Voir les clients</a></p>
+              <p><button href="" onclick='getClientsReserve("${data.data._id}")'>Voir les clients</button></p>
               <div class="btn-container">
                 <button class="btn-annule" onclick='annulerOption("${data.data._id}")'>Annuler</button>
                 <button class="btn-terminer" onclick='terminerOption("${data.data._id}")'>Terminer</button>
@@ -116,6 +116,45 @@ $(document).ready(() => {
         console.log(data);
         showPopup(data.message);
         window.location.reload();
+      },
+      error: function (error) {
+        console.log(error.responseJSON.message);
+        showPopup(error.responseJSON.message);
+      },
+    });
+  };
+
+  function showPopupClients(nom, prenom, numero) {
+    const popup = `
+        <div id="cd-pop-up" class="is-visible">
+          <div id="popup-container" class="cd-popup-container">
+            <div class="card-popup">
+              <div class="card-content-popup">
+                <div>
+                  <p><span>Nom:</span> ${nom}</p>
+                  <p><span>Prenom:</span> ${prenom}</p>
+                  <p><span>Numéro:</span> ${numero} FCFA</p>
+              </div>
+              <a href="#0" class="cd-popup-close" onclick="hidePopup()">x</a>
+            </div>
+          </div>
+        </div>
+      `;
+    $("body").append(popup);
+  }
+
+  window.getClientsReserve = (id) => {
+    $.ajax({
+      url: `http://localhost:3000/api/v1/clients/get-client-reserve-my-trajet/${id}`,
+      type: "GET",
+      headers: {
+        Authorization: `Bearer ${localStorage.getItem("tokenCovoitExpress")}`,
+      },
+      success: function (data) {
+        console.log(data);
+        data.data.forEach((e) =>
+          showPopupClients(e.idClient.nom, e.idClient.prenom, e.idClient.tel)
+        );
       },
       error: function (error) {
         console.log(error.responseJSON.message);

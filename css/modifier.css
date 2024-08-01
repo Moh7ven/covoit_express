@@ -27,36 +27,14 @@ nav ul {
   color: black;
   font-size: 16px;
 }
-
-.nav-active {
-  position: relative;
+.nav-active-option {
+  height: auto;
+  width: 100%;
+  background-color: #5271ff;
   font-weight: bold;
-
-  &::after {
-    content: "";
-    height: 10px;
-    width: 0;
-    background-color: #5271ff;
-    position: absolute;
-    border-radius: 10px;
-    bottom: 0px;
-    left: 50%;
-    transform: translateX(-50%);
-    -webkit-animation: anim 0.3s ease forwards;
-    animation: anim 0.3s ease forwards;
-
-    @-webkit-keyframes anim {
-      to {
-        width: 100%;
-      }
-    }
-
-    @keyframes anim {
-      to {
-        width: 100%;
-      }
-    }
-  }
+  color: white;
+  border-radius: 4px;
+  padding: 10px;
 }
 
 .deco {
